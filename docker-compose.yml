@@ -1,0 +1,12 @@
+---
+
+version: '3.7'
+
+services:
+  transmission:
+    container_name: transfer.sh
+    image: st0rmingbr4in/arm32v5-transfer.sh
+    restart: unless-stopped
+    command: --provider local --basedir /tmp/
+    ports:
+      - 8080:8080
